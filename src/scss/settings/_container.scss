@@ -3,6 +3,7 @@ $container-max-widths: (
   tablet: 768px,
   notebook: 1160px,
   laptop: 1360px,
+  desktop: 1840px,
 ) !default;
 
 $container-wide-width: 1800px !default; // Размеры для отдельного, широкого контейнера
