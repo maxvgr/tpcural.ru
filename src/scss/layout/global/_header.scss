@@ -6,9 +6,86 @@
   .container {
     padding: 0 40px;
   }
-
 }
 
 .header {
+  &__wrapper {
+    display: flex;
+    gap: 19px;
+  }
 
+  &__logo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding-top: 6px;
+
+    span {
+      color: $color-text__gray;
+      font-size: $font__text--small;
+      line-height: 17px; /* 121.429% */
+    }
+  }
+
+  &__top-nav {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 0.2fr 0.3fr 1fr;
+    align-items: center;
+    padding-top: 9px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #818181;
+  }
+
+  &__catalog-btn {
+    max-width: 192px;
+    padding: 6px 23px;
+    border-radius: 6px;
+    background: $palette-black;
+    color: $color-text__white;
+    font-weight: 500;
+    font-size: 18px;
+
+    a {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+
+      svg path {
+        transition: $transition-time ease;
+      }
+
+      &:hover {
+        svg path {
+          fill: $link-hover-color;
+        }
+      }
+    }
+  }
+
+  &__phone {
+    color: #1d1d1b;
+    font-size: 22px;
+  }
+
+  &__mail {
+    padding-left: 41px;
+    font-size: 18px;
+  }
+
+  &__social {
+    justify-self: center;
+  }
+
+  &__search {
+    padding-left: 60px;
+  }
+
+  &__callback {
+    padding-left: 24px;
+  }
+
+  &__bottom-nav {
+    padding: 15px 0;
+  }
 }

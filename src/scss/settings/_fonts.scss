@@ -2,12 +2,16 @@
 // В этом файле подключаются все шрифты через font-face, и задаются основные настройки типографики
 // -----------------------------------------------------------------------------
 
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Light", 300);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Regular", 400);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Medium", 500);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Bold", 700);
+@include font-face("Inter", "../assets/fonts/Inter/Inter-Light", 300);
+@include font-face("Inter", "../assets/fonts/Inter/Inter-Regular", 400);
+@include font-face("Inter", "../assets/fonts/Inter/Inter-Medium", 500);
+@include font-face("Inter", "../assets/fonts/Inter/Inter-Bold", 700);
 
-$font-default: "Roboto", sans-serif; // Семейство по умолчанию
+@include font-face("RussoOne", "../assets/fonts/RussoOne/RussoOne-Regular", 400);
+
+$font-default: "Inter", sans-serif; // Семейство по умолчанию
+$font-title: "RussoOne", sans-serif; // Для заголовков
+
 
 /* Размеры заголовков */
 $font__title--large: 64px;

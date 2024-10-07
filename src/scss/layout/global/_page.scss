@@ -16,4 +16,12 @@
   &__body {
     overflow: clip;
   }
+
+  a.link {
+    transition: $transition-time ease;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
 }

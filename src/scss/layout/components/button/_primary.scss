@@ -1,2 +1,12 @@
 .button-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 51px;
+  background-image: url('../assets/images/global/btn-primary.png');
+  background-repeat: no-repeat;
+  color: $color-text__white;
+  font-weight: 500;
+  font-size: 18px;
 }
