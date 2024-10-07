@@ -7,8 +7,10 @@ $color-text__primary: #1d1d1b;
 $color-text__black: #000000;
 $color-text__white: #ffffff;
 $color-text__gray: #6c6c6c;
+$color-text__orange: #F45F00;
 
-$link-hover-color: #c14b00 !default;
+// $link-hover-color: #c14b00 !default;
+$link-hover-color: #F45F00 !default;
 
 body {
   color: $color-text__primary;

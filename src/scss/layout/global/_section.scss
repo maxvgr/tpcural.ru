@@ -8,6 +8,14 @@
   }
 
   &__title {
-
+    padding-top: 71px;
+    padding-bottom: 32px;
+    color: $color-text__gray;
+    font-size: 26px;
+    font-family: $font-title;
+    line-height: 36px; /* 138.462% */
+    letter-spacing: 0.78px;
+    text-align: center;
+    text-transform: uppercase;
   }
 }
