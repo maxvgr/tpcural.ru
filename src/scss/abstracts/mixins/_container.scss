@@ -13,7 +13,11 @@
   }
 
   &--wide {
-    @include breakpoint(map.get($grid-breakpoint, "laptop")) {
+    // @include breakpoint(map.get($grid-breakpoint, "laptop")) {
+    //   max-width: $container-wide-width;
+    // }
+
+    @include breakpoint(map.get($grid-breakpoint, "desktop")) {
       max-width: $container-wide-width;
     }
   }
