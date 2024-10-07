@@ -3,7 +3,42 @@
 }
 
 .slider {
-  background-image: url('../assets/images/sections/slider/slide.jpg');
-  background-repeat: no-repeat;
+  &__wrapper {
+    position: relative;
+  }
+
+  &__info {
+    position: absolute;
+    top: 200px;
+    left: 162px;
+  }
+
+  &__title {
+    color: $color-text__white;
+    font-size: 52px;
+    font-family: $font-title;
+    line-height: 135%; /* 70.2px */
+    letter-spacing: 1.56px;
+    text-transform: uppercase;
+
+    span {
+      display: block;
+      padding-top: 19px;
+      padding-bottom: 57px;
+      font-size: 18px;
+      font-family: $font-default;
+      text-transform: none;
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    top: 151px;
+    right: 155px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
 
 }

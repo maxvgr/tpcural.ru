@@ -1,0 +1,29 @@
+.button-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 601px;
+    height: 209px;
+    padding: 50px 62px 50px 58px;
+    background-image: url('../assets/images/sections/slider/button.png');
+    background-repeat: no-repeat;
+    color: $color-text__white;
+    font-size: 26px;
+    font-family: $font-title;
+    line-height: 36px; /* 138.462% */
+    letter-spacing: 0.78px;
+    text-transform: uppercase;
+
+    svg {
+      padding-right: 8px;
+      transition: $transition-time ease;
+    }
+
+    &:hover {
+      svg {
+        // stroke: $link-hover-color;
+
+        transform: translateX(8px);
+      }
+    }
+}
