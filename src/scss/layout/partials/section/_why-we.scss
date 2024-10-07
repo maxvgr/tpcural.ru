@@ -1,0 +1,40 @@
+.why-we {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 64px;
+    max-height: 608px;
+    margin-top: 48px;
+    padding: 97px 124px 95px 200px;
+    border-radius: 10px;
+    background:  url("../assets/images/sections/why-we/bg.jpg"), linear-gradient(0deg, #364771 0%, #364771 100%), linear-gradient(223deg, #ffffff 51.16%, #FFE9DB 98.66%);
+    background-position: top left, top left;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  &__title {
+    color: $color-text__white;
+    font-size: 26px;
+    font-family: $font-title;
+    line-height: 36px; /* 138.462% */
+    letter-spacing: 0.78px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-height: 220px;
+    color: $color-text__white;
+    font-size: 18px;
+    line-height: 26px; /* 144.444% */
+
+    p:not(:last-child) {
+      padding-bottom: 12px;
+    }
+  }
+}

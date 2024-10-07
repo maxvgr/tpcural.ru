@@ -62,12 +62,18 @@
       font-family: $font-title;
       letter-spacing: 0.56px;
     }
+
+    .button {
+      // width: 185px;
+    }
   }
 
   .swiper-button-prev,
   .swiper-button-next {
+    top: calc(50% - 45px);
     width: 71px;
     height: 32px;
+
     // margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
     // z-index: 10;
     // cursor: pointer;
