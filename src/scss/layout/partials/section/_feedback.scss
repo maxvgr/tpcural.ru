@@ -1,0 +1,32 @@
+.feedback {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 76px;
+    align-items: center;
+    height: 224px;
+    margin-top: 79px;
+    padding: 58px 0 60px 277px;
+    border-radius: 10px;
+    background: url("../assets/images/sections/feedback/bg.png"), linear-gradient(243deg, #C14B00 7.07%, #F45F00 87.26%);
+  }
+
+  &__title {
+    padding-bottom: 12px;
+    color: $color-text__white;
+    font-size: 36px;
+    font-family: $font-title;
+    letter-spacing: 0.72px;
+  }
+
+  &__text {
+    color: $color-text__white;
+    font-size: 18px;
+    line-height: 26px; /* 144.444% */
+  }
+
+  .button-secondary--orange {
+    width: 297px;
+    background-image: url("../assets/images/sections/feedback/button.png");
+  }
+}
