@@ -1,0 +1,30 @@
+.contacts {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 53px 0 53px 158px;
+    border: 1px dashed #818181;
+    border-radius: 10px;
+    background: #f2f2f2;
+    font-size: 18px;
+
+    span {
+      display: block;
+      color: #A3A3A3;
+    }
+  }
+
+  &__map {
+    & > iframe {
+      border-radius: 10px;
+    }
+  }
+}
