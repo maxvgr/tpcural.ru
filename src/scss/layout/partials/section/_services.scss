@@ -1,11 +1,6 @@
 .services {
   &__wrapper {
     position: relative;
-
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
-    // gap: 20px;
-
     max-width: 1520px;
     margin: 0 auto;
     padding-bottom: 31px;
@@ -73,14 +68,6 @@
     top: calc(50% - 45px);
     width: 71px;
     height: 32px;
-
-    // margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
-    // z-index: 10;
-    // cursor: pointer;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // color: var(--swiper-navigation-color, var(--swiper-theme-color));
   }
 
   .swiper-button-prev::after,
