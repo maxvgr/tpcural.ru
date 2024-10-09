@@ -4,6 +4,10 @@
 
 #header {
   .container {
+    @include breakpoint($breakpoint-notebook) {
+      padding: 0 16px;
+    }
+
     padding: 0 40px;
   }
 }
@@ -12,15 +16,26 @@
   &__wrapper {
     display: flex;
     gap: 19px;
+    max-width: 1520px;
+    margin: 0 auto;
   }
 
   &__logo {
+    @include breakpoint($breakpoint-notebook) {
+      min-width: 163px;
+    }
+
     display: flex;
     gap: 12px;
     align-items: center;
+    min-width: 330px;
     padding-top: 4px;
 
     span {
+      @include breakpoint($breakpoint-notebook) {
+        display: none;
+      }
+
       color: $color-text__gray;
       font-size: $font__text--small;
       line-height: 17px; /* 121.429% */
@@ -28,6 +43,20 @@
   }
 
   &__top-nav {
+    @include breakpoint($breakpoint-desktop) {
+      grid-template-columns: 1.5fr 1fr 1fr 0.3fr 0.3fr 1fr;
+    }
+    @include breakpoint($breakpoint-laptop) {
+      grid-template-columns: 1fr 1fr 0.3fr 0.3fr 1fr;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 1fr 0.3fr 1fr 0.3fr;
+      gap: 0 5px;
+      padding-top: 1px;
+      padding-bottom: 5px;
+      border-bottom: none;
+    }
+
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 0.2fr 0.3fr 1fr;
     align-items: center;
@@ -37,6 +66,10 @@
   }
 
   &__catalog-btn {
+    @include breakpoint($breakpoint-laptop) {
+      display: none;
+    }
+
     max-width: 192px;
     padding: 6px 23px;
     border-radius: 6px;
@@ -64,28 +97,105 @@
   }
 
   &__phone {
-    color: #1d1d1b;
+    @include breakpoint($breakpoint-notebook) {
+      align-self: end;
+      font-size: 18px;
+    }
+
     font-size: 22px;
+    white-space: nowrap;
   }
 
   &__mail {
+    @include breakpoint($breakpoint-laptop) {
+      justify-self: center;
+      padding-left: 0;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      grid-row: 2/3;
+      justify-self: start;
+    }
+
     padding-left: 41px;
     font-size: 18px;
   }
 
   &__social {
+    @include breakpoint($breakpoint-notebook) {
+      align-self: end;
+      margin-bottom: -5px;
+    }
+
     justify-self: center;
+    min-width: 24px;
   }
 
   &__search {
+    @include breakpoint($breakpoint-desktop) {
+      justify-self: center;
+      padding-left: 0;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      display: none;
+    }
+
     padding-left: 60px;
   }
 
   &__callback {
+    @include breakpoint($breakpoint-notebook) {
+      grid-row: 1/3;
+      grid-column: 3/4;
+      padding-left: 0;
+    }
+
     padding-left: 24px;
   }
 
   &__bottom-nav {
+    @include breakpoint($breakpoint-notebook) {
+      display: none;
+    }
+
     padding: 15px 0 17px;
+  }
+
+
+  &__burger {
+    @include breakpoint($breakpoint-notebook) {
+      z-index: 10;
+      display: block;
+      grid-row: 1/3;
+      grid-column: 4/5;
+      width: 82px;
+      height: 68px;
+      padding: 10px 23px;
+      border-radius: 6px;
+      background: $palette-black;
+    }
+
+    display: none;
+    justify-self: end;
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      // @include breakpoint($breakpoint-mobile) {
+      //   background-color: $color-text__black;
+      // }
+
+      background-color: $palette-white;
+    }
+
+    .hamburger-box {
+      width: 36px;
+      height: 46px;
+  }
+
+    .hamburger.is-active .hamburger-inner,
+    .hamburger.is-active .hamburger-inner::before,
+    .hamburger.is-active .hamburger-inner::after {
+      // background-color: $color-text__blue;
+    }
   }
 }
