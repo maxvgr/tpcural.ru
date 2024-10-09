@@ -6,4 +6,66 @@
 }
 
 .footer {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr .8fr;
+    gap: 11px;
+    max-width: 1520px;
+    margin: 79px auto 0;
+  }
+
+  &__col1 {
+    padding-right: 110px;
+  }
+
+  &__col4 {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__logo {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+    color: $color-text__black;
+    font-size: 18px;
+  }
+
+  &__address {
+    padding-top: 15px;
+    color: #818181;
+    font-size: 18px;
+    line-height: 26px; /* 144.444% */
+  }
+
+  &__phone {
+    margin-bottom: -25px;
+    font-size: 26px;
+  }
+
+  &__mail {
+    font-size: 18px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #818181;
+    font-size: 18px;
+  }
+
+  &__copyright {
+    margin-top: -60px;
+    color: #818181;
+    line-height: 26px; /* 162.5% */
+  }
+
+  &__artfactor {
+    grid-column: 4/5;
+    margin-top: -33px;
+    color: #818181;
+    line-height: 26px; /* 162.5% */
+  }
 }

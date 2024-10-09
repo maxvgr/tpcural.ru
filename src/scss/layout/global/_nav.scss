@@ -43,4 +43,20 @@
 
     }
   }
+
+  &--footer {
+    .nav__list {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+    }
+
+    .nav__item {
+      font-size: 18px;
+    }
+
+    .nav__link {
+
+    }
+  }
 }
