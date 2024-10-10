@@ -1,5 +1,15 @@
 .catalog {
+  .container {
+    @include breakpoint($breakpoint-tablet) {
+      padding: 0;
+    }
+  }
+
   &__title {
+    @include breakpoint($breakpoint-tablet) {
+      padding-bottom: 11px;
+    }
+
     padding-top: 71px;
     padding-bottom: 32px;
     color: $color-text__gray;
@@ -12,6 +22,14 @@
   }
 
   &__wrapper {
+    @include breakpoint($breakpoint-desktop) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+      border: none;
+    }
+
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
     border: 1px dashed #818181;
@@ -19,6 +37,15 @@
   }
 
   &-item__title {
+    @include breakpoint($breakpoint-notebook) {
+      font-size: 20px;
+      letter-spacing: 0.4px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      padding-bottom: 0;
+      text-align: center;
+    }
+
     padding-bottom: 15px;
     color: $color-text__orange;
     font-size: 28px;
@@ -27,6 +54,14 @@
   }
 
   &__item {
+    @include breakpoint($breakpoint-desktop) {
+      padding: 28px 25px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      padding: 17px 0;
+      border-right: none;
+    }
+
     width: 100%;
     padding: 45px 28px 34px 48px;
     border-right: 1px dashed #818181;
@@ -34,10 +69,32 @@
 
     &:first-child,
     &:nth-child(5) {
+      @include breakpoint($breakpoint-desktop) {
+        padding-left: 25px;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        padding-left: 0;
+      }
+
       padding-left: 159px;
     }
 
+    &:nth-child(3),
+    &:nth-child(6) {
+      @include breakpoint($breakpoint-desktop) {
+        border-right: none;
+      }
+    }
+
     &:nth-child(4) {
+      @include breakpoint($breakpoint-desktop) {
+        padding-right: 0;
+        border-right: 1px dashed #818181;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        border-right: none;
+      }
+
       padding-right: 159px;
       border-right: none;
     }
@@ -46,18 +103,66 @@
     &:nth-child(6),
     &:nth-child(7),
     &:nth-child(8) {
+      @include breakpoint($breakpoint-tablet) {
+        border-bottom: 1px dashed #818181;
+      }
+
       border-bottom: none;
     }
 
+    &:nth-child(5),
+    &:nth-child(6) {
+      @include breakpoint($breakpoint-desktop) {
+        border-bottom: 1px dashed #818181;
+      }
+    }
+
+    .button {
+      @include breakpoint($breakpoint-tablet) {
+        display: none;
+      }
+
+      margin-top: 15px;
+    }
+
     &:last-child {
+      @include breakpoint($breakpoint-desktop-big) {
+        padding-right: 0;
+      }
+      @include breakpoint($breakpoint-desktop) {
+        grid-column: 2/4;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        grid-column: auto;
+        padding-top: 0;
+        border-bottom: none;
+        background: none;
+
+        .button {
+          @include breakpoint($breakpoint-tablet) {
+            display: flex;
+            width: 250px;
+            background-image: url('../assets/images/global/btn-secondary--gray-cat.png');
+            color: #434343;
+          }
+        }
+      }
+
       display: flex;
       flex-direction: column;
       align-items: center;
       padding-top: 85px;
       padding-right: 159px;
-      background: linear-gradient(243deg, #C14B00 7.07%, #F45F00 87.26%);
+      background: linear-gradient(243deg, #c14b00 7.07%, #f45f00 87.26%);
 
       .catalog-item__title {
+        @include breakpoint($breakpoint-notebook) {
+          font-size: 26px;
+        }
+        @include breakpoint($breakpoint-tablet) {
+          display: none;
+        }
+
         color: $color-text__white;
         font-size: 32px;
         letter-spacing: 0.64px;
@@ -66,6 +171,10 @@
     }
 
     ul {
+      @include breakpoint($breakpoint-tablet) {
+        display: none;
+      }
+
       display: flex;
       flex-direction: column;
       gap: 7px;
@@ -74,11 +183,5 @@
         font-size: 18px;
       }
     }
-
-    .button {
-      margin-top: 15px;
-    }
   }
-
-
 }

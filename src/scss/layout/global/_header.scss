@@ -14,6 +14,10 @@
 
 .header {
   &__wrapper {
+    @include breakpoint($breakpoint-mobile) {
+      justify-content: space-between;
+    }
+
     display: flex;
     gap: 19px;
     max-width: 1520px;
@@ -23,6 +27,14 @@
   &__logo {
     @include breakpoint($breakpoint-notebook) {
       min-width: 163px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      max-width: 163px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      justify-content: space-between;
+      min-width: 100px;
+      max-width: 100px;
     }
 
     display: flex;
@@ -55,6 +67,9 @@
       padding-top: 1px;
       padding-bottom: 5px;
       border-bottom: none;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr 0.3fr;
     }
 
     display: grid;
@@ -101,6 +116,9 @@
       align-self: end;
       font-size: 18px;
     }
+    @include breakpoint($breakpoint-tablet) {
+      display: none;
+    }
 
     font-size: 22px;
     white-space: nowrap;
@@ -115,6 +133,9 @@
       grid-row: 2/3;
       justify-self: start;
     }
+    @include breakpoint($breakpoint-tablet) {
+      display: none;
+    }
 
     padding-left: 41px;
     font-size: 18px;
@@ -124,6 +145,9 @@
     @include breakpoint($breakpoint-notebook) {
       align-self: end;
       margin-bottom: -5px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      display: none;
     }
 
     justify-self: center;
@@ -150,6 +174,15 @@
     }
 
     padding-left: 24px;
+
+    .button-primary {
+      @include breakpoint($breakpoint-tablet) {
+        width: 145px;
+        height: 42px;
+        background-image: url("../assets/images/global/btn-primary-small.png");
+        font-size: 14px;
+      }
+    }
   }
 
   &__bottom-nav {
@@ -159,7 +192,6 @@
 
     padding: 15px 0 17px;
   }
-
 
   &__burger {
     @include breakpoint($breakpoint-notebook) {
@@ -173,6 +205,11 @@
       border-radius: 6px;
       background: $palette-black;
     }
+    @include breakpoint($breakpoint-mobile) {
+      width: 55px;
+      height: 52px;
+      padding: 9px 14px;
+    }
 
     display: none;
     justify-self: end;
@@ -180,17 +217,34 @@
     .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after {
-      // @include breakpoint($breakpoint-mobile) {
-      //   background-color: $color-text__black;
-      // }
+      @include breakpoint($breakpoint-mobile) {
+        height: 2px;
+      }
 
       background-color: $palette-white;
     }
 
+    .hamburger-inner::before {
+      @include breakpoint($breakpoint-mobile) {
+        top: -10px;
+      }
+    }
+
+    .hamburger-inner::after {
+      @include breakpoint($breakpoint-mobile) {
+        bottom: -10px;
+      }
+    }
+
     .hamburger-box {
+      @include breakpoint($breakpoint-mobile) {
+        width: 30px;
+        height: 36px;
+      }
+
       width: 36px;
       height: 46px;
-  }
+    }
 
     .hamburger.is-active .hamburger-inner,
     .hamburger.is-active .hamburger-inner::before,
