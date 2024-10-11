@@ -1,5 +1,19 @@
 .feedback {
   &__wrapper {
+    @include breakpoint($breakpoint-laptop) {
+      padding: 45px 30px;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      gap: 10px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      height: auto;
+      margin-top: 0;
+      padding: 31px 16px;
+    }
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 76px;
@@ -8,10 +22,23 @@
     margin-top: 79px;
     padding: 58px 0 60px 277px;
     border-radius: 10px;
-    background: url("../assets/images/sections/feedback/bg.png"), linear-gradient(243deg, #C14B00 7.07%, #F45F00 87.26%);
+    background: url("../assets/images/sections/feedback/bg.png"), linear-gradient(243deg, #c14b00 7.07%, #f45f00 87.26%);
+  }
+
+  &__left {
+    @include breakpoint($breakpoint-tablet) {
+      text-align: center;
+    }
   }
 
   &__title {
+    @include breakpoint($breakpoint-notebook) {
+      font-size: 30px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 26px;
+    }
+
     padding-bottom: 12px;
     color: $color-text__white;
     font-size: 36px;
@@ -23,6 +50,15 @@
     color: $color-text__white;
     font-size: 18px;
     line-height: 26px; /* 144.444% */
+  }
+
+  &__right {
+    @include breakpoint($breakpoint-notebook) {
+      justify-self: end;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      justify-self: center;
+    }
   }
 
   .button-secondary--orange {

@@ -46,7 +46,7 @@
     cursor: pointer;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       width: 29px;
       min-width: 30px;
@@ -59,7 +59,6 @@
       transition: $transition-time ease;
     }
   }
-
 
   &__text {
     padding-top: 20px;

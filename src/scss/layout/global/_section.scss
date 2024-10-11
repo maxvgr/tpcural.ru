@@ -8,6 +8,10 @@
   }
 
   &__title {
+    @include breakpoint($breakpoint-tablet) {
+      padding-top: 35px;
+    }
+
     padding-top: 71px;
     padding-bottom: 32px;
     color: $color-text__gray;

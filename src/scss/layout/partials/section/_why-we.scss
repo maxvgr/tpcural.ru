@@ -5,10 +5,9 @@
     }
   }
 
-
   &__wrapper {
     @include breakpoint($breakpoint-desktop-big) {
-      grid-template-columns: 1.5fr .8fr;
+      grid-template-columns: 1.5fr 0.8fr;
       gap: 40px;
       padding: 67px 100px;
     }
@@ -26,14 +25,15 @@
     }
 
     display: grid;
-    grid-template-columns: 1.1fr .9fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 64px;
     align-items: center;
     max-height: 608px;
     margin-top: 48px;
     padding: 97px 124px 95px 200px;
     border-radius: 10px;
-    background:  url("../assets/images/sections/why-we/bg.jpg"), linear-gradient(0deg, #364771 0%, #364771 100%), linear-gradient(223deg, #ffffff 51.16%, #FFE9DB 98.66%);
+    background: url("../assets/images/sections/why-we/bg.jpg"), linear-gradient(0deg, #364771 0%, #364771 100%),
+      linear-gradient(223deg, #ffffff 51.16%, #ffe9db 98.66%);
     background-position: top left, top left;
     background-size: cover;
     background-repeat: no-repeat, no-repeat;
@@ -93,7 +93,7 @@
     align-items: center;
     min-width: 340px;
     padding: 13px 0 13px 28px;
-    background: #2C3236;
+    background: #2c3236;
     color: $color-text__white;
     font-size: 18px;
   }

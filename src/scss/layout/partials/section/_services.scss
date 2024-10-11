@@ -60,8 +60,6 @@
 
       word-break: break-all;
       // overflow-wrap: break-word;
-
-
     }
 
     display: flex;
@@ -92,7 +90,7 @@
     margin: 15px auto 0;
     padding: 21px 0;
     border-radius: 10px;
-    background: linear-gradient(243deg, #C14B00 7.07%, #F45F00 87.26%);
+    background: linear-gradient(243deg, #c14b00 7.07%, #f45f00 87.26%);
 
     span {
       @include breakpoint($breakpoint-tablet) {
@@ -145,5 +143,4 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='71' height='32' viewBox='0 0 71 32' fill='none'%3E%3Cpath d='M0 16H70M70 16L54.902 1M70 16L54.902 31' stroke='%23818181'/%3E%3C/svg%3E");
     transform: rotate(180deg);
   }
-
 }

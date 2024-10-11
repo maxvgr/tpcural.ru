@@ -7,6 +7,10 @@
 
 .footer {
   &__wrapper {
+    @include breakpoint($breakpoint-laptop) {
+      grid-template-columns: 1fr 1fr;
+    }
+
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr .8fr;
     gap: 11px;
@@ -15,33 +19,128 @@
   }
 
   &__col1 {
+    @include breakpoint($breakpoint-laptop) {
+      padding-right: 0;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-column: 1/3;
+    }
+
     padding-right: 110px;
   }
 
+  &__copy {
+    @include breakpoint($breakpoint-laptop) {
+      display: none;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      display: block;
+      text-align: center;
+    }
+
+    &--hidden {
+      @include breakpoint($breakpoint-laptop) {
+        display: block;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        display: none;
+      }
+
+      display: none;
+      padding-top: 18px;
+      color: #818181;
+      line-height: 26px; /* 162.5% */
+    }
+  }
+
+  &__col2 {
+    @include breakpoint($breakpoint-laptop) {
+      grid-row: 2/3;
+      margin-top: 30px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-row: 3/4;
+    }
+  }
+
+  &__col3 {
+    @include breakpoint($breakpoint-laptop) {
+      grid-row: 2/3;
+      margin-top: 30px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-row: 3/4;
+    }
+  }
+
   &__col4 {
+    @include breakpoint($breakpoint-tablet) {
+      grid-column: 1/3;
+    }
+
     display: flex;
     flex-direction: column;
     gap: 25px;
+
+    .button {
+      @include breakpoint($breakpoint-tablet) {
+        order: 3;
+      }
+    }
   }
 
   &__logo {
+    @include breakpoint($breakpoint-laptop) {
+      font-size: 16px;
+    }
+
+
     display: flex;
     gap: 17px;
     align-items: center;
     color: $color-text__black;
     font-size: 18px;
+
+    & > a {
+      @include breakpoint($breakpoint-laptop) {
+        max-width: 180px;
+      }
+      @include breakpoint($breakpoint-mobile) {
+        max-width: 160px;
+      }
+
+      min-width: 160px;
+    }
   }
 
   &__address {
+    @include breakpoint($breakpoint-tablet) {
+      display: none;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      font-size: 16px;
+    }
+
     padding-top: 15px;
     color: #818181;
     font-size: 18px;
     line-height: 26px; /* 144.444% */
+
+    &--hidden {
+      @include breakpoint($breakpoint-tablet) {
+        display: block;
+        text-align: center;
+      }
+
+
+      display: none;
+    }
   }
 
   &__phone {
     margin-bottom: -25px;
     font-size: 26px;
+    white-space: nowrap;
   }
 
   &__mail {
@@ -57,12 +156,28 @@
   }
 
   &__copyright {
+    @include breakpoint($breakpoint-laptop) {
+      grid-column: 1/3;
+      justify-self: center;
+      margin-top: 20px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      text-align: center;
+    }
+
+
     margin-top: -60px;
     color: #818181;
     line-height: 26px; /* 162.5% */
   }
 
   &__artfactor {
+    @include breakpoint($breakpoint-laptop) {
+      grid-column: 1/3;
+      justify-self: center;
+      margin-top: 0;
+    }
+
     grid-column: 4/5;
     margin-top: -33px;
     color: #818181;
