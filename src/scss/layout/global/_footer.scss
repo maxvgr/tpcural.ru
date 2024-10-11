@@ -10,6 +10,9 @@
     @include breakpoint($breakpoint-laptop) {
       grid-template-columns: 1fr 1fr;
     }
+    @include breakpoint($breakpoint-mobile) {
+      margin: 31px auto 26px;
+    }
 
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr .8fr;
