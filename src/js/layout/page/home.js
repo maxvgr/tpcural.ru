@@ -57,7 +57,7 @@ new Swiper(".clientsSwiper", {
     360: {
       slidesPerView: 2,
     },
-    700: {
+    768: {
       slidesPerView: 3,
     },
     1500: {
