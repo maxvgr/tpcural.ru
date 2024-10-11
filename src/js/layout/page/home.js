@@ -23,7 +23,7 @@ new Swiper(".serviceSwiper", {
     360: {
       slidesPerView: 2,
     },
-    800: {
+    768: {
       slidesPerView: 3,
     },
     1500: {
@@ -57,7 +57,7 @@ new Swiper(".clientsSwiper", {
     360: {
       slidesPerView: 2,
     },
-    800: {
+    700: {
       slidesPerView: 3,
     },
     1500: {
