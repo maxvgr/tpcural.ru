@@ -1,5 +1,30 @@
 .why-we {
+  .container {
+    @include breakpoint($breakpoint-mobile) {
+      padding: 0;
+    }
+  }
+
+
   &__wrapper {
+    @include breakpoint($breakpoint-desktop-big) {
+      grid-template-columns: 1.5fr .8fr;
+      gap: 40px;
+      padding: 67px 100px;
+    }
+    @include breakpoint($breakpoint-desktop) {
+      grid-template-columns: 1fr;
+      gap: 49px;
+      max-height: unset;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      padding: 50px 27px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: 0;
+      padding: 35px 15px;
+    }
+
     display: grid;
     grid-template-columns: 1.1fr .9fr;
     gap: 64px;
@@ -10,6 +35,7 @@
     border-radius: 10px;
     background:  url("../assets/images/sections/why-we/bg.jpg"), linear-gradient(0deg, #364771 0%, #364771 100%), linear-gradient(223deg, #ffffff 51.16%, #FFE9DB 98.66%);
     background-position: top left, top left;
+    background-size: cover;
     background-repeat: no-repeat, no-repeat;
   }
 
@@ -20,6 +46,11 @@
   }
 
   &__title {
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 22px;
+      line-height: 30px; /* 138.462% */
+    }
+
     color: $color-text__white;
     font-size: 26px;
     font-family: $font-title;
@@ -29,7 +60,10 @@
   }
 
   &__text {
-    max-height: 220px;
+    // @include breakpoint($breakpoint-notebook) {
+    //   gap: 20px;
+    // }
+
     color: $color-text__white;
     font-size: 18px;
     line-height: 26px; /* 144.444% */
@@ -40,12 +74,20 @@
   }
 
   &__advantages {
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
   }
 
   .advantages__item {
+    @include breakpoint($breakpoint-tablet) {
+      min-width: 330px;
+    }
+
     display: flex;
     gap: 13px;
     align-items: center;
