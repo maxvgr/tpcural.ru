@@ -66,3 +66,23 @@
     }
   }
 }
+
+.dropdown-nav {
+  .nav__list {
+    // display: flex;
+    // flex-direction: column;
+
+    margin: 0 16px;
+    padding: 0;
+    background: #ffffffe6;
+
+  }
+
+  .nav__item {
+    color: #434343;
+    font-size: 18px;
+    font-family: $font-title;
+    letter-spacing: 0.36px;
+  }
+
+}
