@@ -171,6 +171,7 @@
     left: 16px;
     display: grid;
     grid-template-columns: 1.3fr 3fr;
+    overflow: hidden;
     width: calc(100% + 16px);
     background-color: #ffffffe6;
 
