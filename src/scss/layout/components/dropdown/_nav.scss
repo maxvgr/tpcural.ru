@@ -95,8 +95,6 @@
 
       @media (hover: hover) {
         &:hover {
-          // background-color: #e6ebef;
-
           background-color: #F45F00;
           color: $color-text__white;
         }
@@ -170,23 +168,26 @@
     position: absolute;
     z-index: 10;
     top: 75px;
-    left: 0;
+    left: 16px;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    // grid-auto-flow: column dense;
-
-    width: 100%;
-
+    grid-template-columns: 1.3fr 3fr;
+    width: calc(100% + 16px);
     background-color: #ffffffe6;
 
     opacity: 0;
     visibility: hidden;
+
     transition: $transition-time ease;
+
+    & > .nav__list {
+      width: 100%;
+      margin: 0;
+    }
   }
 
   .catalog-menu__item {
     & > a {
-      padding: 12px 20px;
+      padding: 12px 20px 12px 150px;
 
       @media (hover: hover) {
         &:hover {
@@ -224,14 +225,30 @@
     }
 
     &.active {
+      & > a {
+        background-color: #F45F00;
+        color: $color-text__white;
+      }
+
       .catalog-menu__nav {
         position: absolute;
-        top: 40px;
-        left: 10%;
-        display: block;
+        top: 0;
+        left: -16px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        padding: 46px 53px;
+        background: #F45F00;
         text-transform: none;
         opacity: 1;
         visibility: visible;
+
+        & > li > a {
+          color: $color-text__white;
+          font-weight: 400;
+          font-size: 18px;
+          font-family: $font-default;
+        }
       }
     }
 
